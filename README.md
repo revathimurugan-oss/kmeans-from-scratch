@@ -81,3 +81,23 @@ The custom K-Means implementation performs comparably to scikit-learn but shows 
 ```bash
 pip install numpy scikit-learn
 python experiment.py
+
+
+
+
+## 🔍 Experimental Insights
+
+### Inertia Analysis
+The custom K-Means implementation shows slightly higher average inertia compared to scikit-learn. This is primarily due to random centroid initialization, whereas scikit-learn uses the optimized k-means++ strategy.
+
+### Silhouette Score Analysis
+The average Silhouette Score achieved by the custom implementation is close to that of scikit-learn, indicating reasonably good cluster separation despite simpler initialization.
+
+### Stability Analysis
+Running the algorithm multiple times revealed noticeable variance in inertia values, highlighting the sensitivity of K-Means to initial centroid selection.
+
+### Key Takeaways
+- Custom implementation correctly follows K-Means logic
+- Random initialization impacts stability and performance
+- Improved initialization methods can significantly enhance clustering results
+
